@@ -1,0 +1,12 @@
+  
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install packages
+    yum:
+      name:
+      - zip
+      - unzip
+      - curl
+      state: latest
